@@ -1,0 +1,29 @@
+.animate_hand {
+  position: relative;
+  animation: move .5s infinite alternate;
+}
+
+.animate_saludo {
+  position: relative;
+  animation: saludar 1s alternate;
+}
+
+
+
+@keyframes saludar {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 10px
+  }
+}
+
+@keyframes move {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 10px;
+  }
+}

@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Saludo from '../components/saludo/Saludo.astro';
+
+---
+
+<Layout title="Profile">
+	<!-- SALUDO -->
+	<div class="relative mx-[269px]">
+		<div class="w-[2px] h-[105px] bg-gradient-to-b from-black_gray-200 to-gray-200 ml-[31px] mb-2 rounded-lg"></div>
+		<Saludo></Saludo>
+		<div class="w-[2px] h-[300px] bg-gradient-to-b from-black_gray-300/10 via-white/50 to-black_gray-300/10 ml-[31px] rounded-lg absolute top-[12rem]"></div>
+	</div>
+	<div class="asolute mt-16">
+		<img src="../../public/img/backgorund.svg" alt="">
+	</div>
+</Layout>

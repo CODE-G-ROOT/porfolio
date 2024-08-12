@@ -1,0 +1,24 @@
+---
+
+interface Props {
+    href?: string;
+    state?: boolean;
+    selected?: boolean;
+};
+
+const { href, state, selected } = Astro.props;
+
+const color = "text-lemon-200/50";
+const color1 = "text-lemon-200";
+
+---
+
+<li class=`box-content ${selected?color1:color} `>
+    <a 
+        href={href}
+        class="w-auto hover:text-lemon-200 transition-colors ease-linear duration-400"
+        >
+        <slot/>
+    </a>
+    <div class=`w-full h-[0.25px] ${state?"bg-mustard-200":null} `></div>
+</li>

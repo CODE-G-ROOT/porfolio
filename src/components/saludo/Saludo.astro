@@ -1,0 +1,29 @@
+---
+import Button from "../Button.astro";
+import "./styles.css"
+---
+<div class="flex">
+    <!-- SVG SALUDO -->
+    <div class="mr-[38px] mt-[12px]">	
+        <img class="w-12 ml-2" src="../../public/img/Frame.svg" alt="saludo">
+    </div>
+    <div class="flex flex-col ">
+         <div class="pb-[33px]">
+             <div class="text-[40px] font-bold tracking-widest leading-tight">
+                 <p class="text-peach-900 ">Hey!</p>
+                 <p>I'm Juan Avila</p>
+             </div>
+             <div class="w-[560px] pt-4">
+                 <p class="font-light text-[20px]">
+                     <span class="font-medium text-gray-200">Desarrollador Web con</span> 
+                     <span class="font-bold text-lemon-200">+1 año de Experiencia en desarrollo de software</span>
+                     <span class="font-regular text-gray-100">, Especializado en el desarrollo de API’s.</span>
+                 </p>
+             </div>
+         </div>
+         <div class="flex align-middle">
+            <Button/>
+            <img class="ml-[18px] w-9 h-9 animate_hand " src="../../public/img/Hand_left.svg" alt="saludo">
+         </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+---
+import HeaderMenu from '../components/Header_menu.astro';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+
+const header_Strings = ["HOME", "TRAYECTORY", "BLOG", "PROYECTS", "CONTACT"];
+
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Hachi+Maru+Pop&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+		<title>{title}</title>
+	</head>
+	<body class="bg-black_gray-100 text-lemon-200 font-inter">
+		<header class="w-100 h-20 flex justify-center">
+			<ul class="w-50 h-full flex justify-center gap-12 pt-5">
+				<HeaderMenu state selected>{header_Strings[0]}</HeaderMenu>
+				<HeaderMenu>{header_Strings[1]}</HeaderMenu>
+				<HeaderMenu>{header_Strings[2]}</HeaderMenu>
+				<HeaderMenu>{header_Strings[3]}</HeaderMenu>
+				<HeaderMenu>{header_Strings[4]}</HeaderMenu>
+			</ul>
+		</header>
+		<main>
+			<slot></slot>
+		</main>
+	</body>
+</html>
