@@ -1,0 +1,33 @@
+---
+interface Props {
+    title: string;
+    date: string;
+    subtitle: string;
+    body?: string;
+    ext?: boolean;
+};
+
+const { title, date, subtitle, body, ext } = Astro.props;
+---
+
+<div class="flex gap-14 items-center">
+    <!-- TODO:   PUNTO -->
+    <div class="bg-black rounded-full w-2 h-2 ml-1"></div>
+    <!-- TODO:  CARD -->
+    <div class="flex w-full h-auto justify-between items-center">
+        <div class="flex flex-col gap-6 text-black w-full">
+            <div class="flex flex-col gap-0">
+                <h2 class="text-2xl text-black font-bold">{title}</h2>
+                <h3 class="text-brown text-lg font-medium">{subtitle}</h3>
+                <span class="font-light text-sm">{date}</span>
+            </div>
+            {
+                body? 
+                <div class="w-11/12 text-brown flex justify-between items-center">
+                    <p class="w-10/12">{body}</p>
+                    <img src="../../public/img/Right-arrow.svg" alt="" class="w-10">
+                </div> : null
+            }
+        </div>
+    </div>
+</div>

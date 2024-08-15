@@ -1,17 +1,40 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Saludo from '../components/saludo/Saludo.astro';
-
+import Cards from '../components/Cards.astro';
 ---
 
 <Layout title="Profile">
 	<!-- SALUDO -->
-	<div class="relative mx-[269px]">
-		<div class="w-[2px] h-[105px] bg-gradient-to-b from-black_gray-200 to-gray-200 ml-[31px] mb-2 rounded-lg"></div>
-		<Saludo></Saludo>
-		<div class="w-[2px] h-[300px] bg-gradient-to-b from-black_gray-300/10 via-white/50 to-black_gray-300/10 ml-[31px] rounded-lg absolute top-[12rem]"></div>
-	</div>
-	<div class="asolute mt-16">
-		<img src="../../public/img/backgorund.svg" alt="">
+	<div class="w-full">
+		<div class="relative mx-[269px]">
+			<div class="w-[2px] h-[105px] bg-gradient-to-b from-black_gray-200 to-gray-200 ml-[31px] mb-2 rounded-lg"></div>
+			<Saludo></Saludo>
+			<div class="w-[2px] h-[300px] bg-gradient-to-b from-black_gray-300/10 via-white/50 to-black_gray-300/10 ml-[31px] rounded-lg absolute top-[12rem]"></div>
+		</div>
+		<div class="relative mt-16">
+			<img class="w-full absolute z-[-10]" src="../../public/img/backgorund.svg" alt="">
+
+
+			<!-- ? TRAYECTORIA -->
+			<div class="flex flex-col mx-[269px] relative">
+				<div class="">
+					<div class="mt-[160px] flex items-center gap-5 ml-2">
+						<img src="../../public/img/Maletin.svg" class="w-11" alt="" srcset="">
+						<h1 class="text-black font-bold text-4xl leading-none">Trayectoria</h1>
+					</div>
+					<div class="w-[2px] h-[766px] mt-2 bg-gradient-to-b from-mustard-100 via-black/40 to-mustard-100 ml-[31px] rounded-lg absolute top-[12rem]"></div>
+				</div>
+				<!-- ? TRAYECTORY CARDS -->
+				<div class="flex flex-col  gap-10 ml-6 mt-10 z-10 w-full">
+					<Cards title='Bachiller' date='Noviembre 2022' subtitle='Instituto Andinoamericano'></Cards>
+					<Cards title='Certificado Hackathon i+Health FCV 2023' subtitle='Cámara de Comercio de Bucaramanga' date='28 - 30 Abril 2023' body='Tres días intensivos de trabajo dieron vida a una innovadora aplicación para el sector salud. Nuestro equipo, "Kepler", desarrolló una app que ayuda a los adultos mayores a gestionar sus recetas médicas de manera organizada...'></Cards>
+					
+				</div>
+			</div>
+
+		</div>
+
+		
 	</div>
 </Layout>

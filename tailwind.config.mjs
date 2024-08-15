@@ -38,6 +38,7 @@ export default {
         mongodb: "#00ED64",
         react: "#58C4DC",
       },
+      brown: "#4B2616"
     },
     fontFamily: {
       Hachi: ["Hachi Maru Pop"],

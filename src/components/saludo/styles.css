@@ -8,14 +8,15 @@
   animation: saludar 1s alternate;
 }
 
-
-
 @keyframes saludar {
   0% {
-    left: 0;
+    transform: rotate(9deg);
+  }
+  60% {
+    transform: rotate(-7deg);
   }
   100% {
-    left: 10px
+    transition: rotate(0);
   }
 }
 
