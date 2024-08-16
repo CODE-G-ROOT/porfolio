@@ -25,8 +25,8 @@ const header_Strings = ["HOME", "TRAYECTORY", "BLOG", "PROYECTS", "CONTACT"];
 		<title>{title}</title>
 	</head>
 	<body class="bg-black_gray-100 text-lemon-200 font-inter w-full">
-		<header class="w-100 h-20 flex justify-center">
-			<ul class="w-50 h-full flex justify-center gap-12 pt-5">
+		<header class="w-100 h-20 flex justify-center z-20">
+			<ul class="w-50 h-full flex justify-center gap-12 pt-5 fixed z-10">
 				<HeaderMenu state selected>{header_Strings[0]}</HeaderMenu>
 				<HeaderMenu>{header_Strings[1]}</HeaderMenu>
 				<HeaderMenu>{header_Strings[2]}</HeaderMenu>
