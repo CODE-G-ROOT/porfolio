@@ -17,7 +17,8 @@ export default {
       },
       gray: {
         100: "#A6A6A6",
-        200: "#626262"
+        200: "#626262",
+        300: "#969696"
       },
       yellow: colors.amber,
       black_gray: {

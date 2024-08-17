@@ -1,14 +1,16 @@
 ---
-import ShowData from "./card";  // Asegúrate de que la extensión y el nombre sean correctos
+import ShowData from "./Trayectory_deploy";  // Asegúrate de que la extensión y el nombre sean correctos
 
 interface Props {
     title: string;
     date: string;
     subtitle: string;
     body?: string;
+    body_p_1?: string;
+    body_p_2?: string;
 }
 
-const { title, date, subtitle, body } = Astro.props;
+const { title, date, subtitle, body, body_p_1, body_p_2 } = Astro.props;
 ---
 
 <div class="flex gap-14 items-center">
@@ -22,7 +24,7 @@ const { title, date, subtitle, body } = Astro.props;
                 <h3 class="text-brown text-lg font-medium">{subtitle}</h3>
                 <span class="font-light text-sm">{date}</span>
             </div>
-            {body ? <ShowData body={body} client:load /> : null}
+            {body ? <ShowData body={body} body_p_1={body_p_1} body_p_2={body_p_2} client:load /> : null}
         </div>
     </div>
 </div>
