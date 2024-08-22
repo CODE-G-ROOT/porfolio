@@ -1,11 +1,15 @@
 ---
-/* 
-- icon
-- text
-*/
+
+interface Props {
+  img: string;
+  text: string;
+}
+
+const { img, text } = Astro.props;
+
 ---
 
 <button class="flex justify-center gap-2 items-center border-lemon-200/50 border-[1px] border-spacing-2 w-28 h-10  rounded-lg bg-white/10 hover:scale-105 duration-300 ease-in-out hover:bg-black/10">
-  <img src="../../public/img/svg/Github.svg" alt="">
-  <span>Code</span>
+  <img src={img} alt="">
+  <span>{text}</span>
 </button>

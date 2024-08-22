@@ -1,47 +1,44 @@
 ---
-/* 
+import Button_proyect from "../Buttons/Code_pre.astro";
 
-- title
-- body
-- tech
-- img
-- views
-*/
+interface Props {
+  title: string;
+  body?: string;
+  img: string;
+  views: number;
+}
+
+const { title, body, img, views } = Astro.props;
 ---
 
 <div class="flex gap-10 justify-between mx-8 mt-10">
   <!-- IMG -->
-  <div class="w-[45%]">
-    <img src="../../public/img/png/shopecomerce.png" alt="" class="w-full h-full">
+  <div class=`w-1/2`>
+    <img src={img} alt="" class="w-full h-full">
   </div>
-  <div class="flex w-[55%] flex-col gap-4 justify-between">
-    <h3 class="text-2xl text-peach-900 font-bold w-2/3 ">SHOPECOMERCE - Ecomerce de Dropshipers</h3>
+  <div class="flex w-1/2 flex-col gap-4 justify-between pb-1">
+    <h3 class="text-2xl text-peach-900 font-bold w-2/3 ">{ title }</h3>
     <!-- TECNOLOGIAS -->
     <div class="flex justify-between items-center ">
-      <ul class="flex w-11/12 h-5 justify-center">
-        <li><img src="../../public/img/svg/Astro.svg" alt=""></li>
-        <li><img src="../../public/img/svg/Tailwind.svg" alt=""></li>
-        <li><img src="../../public/img/svg/Typescript.svg" alt=""></li>
-        <li><img src="../../public/img/svg/Mongodb.svg" alt=""></li>
-      </ul>
+      <slot></slot>
     </div>
-    <p class="text-gray-300 text-md">Aplicación enfoncada al mercado Dropshiping. En esta aplicación los Dropshipers pueden ponerse en contacto con proveedores estratégicamente seleccionados para este mercado y viceversa, con un enfoque de ganar.</p>
+    <p class="text-gray-300 text-md">{body}</p>
     <!-- BUTTONS -->
     <div class="flex justify-between items-center">
       <!-- BUTTONS -->
       <div class="flex gap-5 ">
-        <button class="flex justify-center gap-2 items-center border-lemon-200/50 border-[1px] border-spacing-2 w-28 h-10  rounded-lg bg-white/10 hover:scale-105 duration-300 ease-in-out hover:bg-black/10">
-          <img src="../../public/img/svg/Github.svg" alt="">
-          <span>Code</span>
-        </button>
-        <button class="flex justify-center gap-2 items-center border-lemon-200/50 border-[1px] border-spacing-2 w-28 h-10  rounded-lg bg-white/10 hover:scale-105 duration-300 ease-in-out hover:bg-black/10">
-          <img src="../../public/img/svg/Link.svg" alt="">
-          <span>Preview</span>
-        </button>
+        <Button_proyect 
+          text='Code'
+          img='../../public/img/svg/Github.svg'
+        ></Button_proyect>
+        <Button_proyect
+         text='Preview'
+         img='../../public/img/svg/Link.svg'
+        ></Button_proyect>
       </div>
       <!-- VISTAS -->
       <div class="flex gap-3 items-center">
-        <span class="text-lemon-200/50 text-sm">10</span>
+        <span class="text-lemon-200/50 text-sm">{views}</span>
         <img src="../../public/img/svg/eye.svg" alt="">
       </div>
     </div>

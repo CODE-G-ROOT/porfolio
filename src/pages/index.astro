@@ -3,24 +3,29 @@ import Layout from '../layouts/Layout.astro';
 import Saludo from '../components/saludo/Saludo.astro';
 import Cards from '../components/Cards/Trayectory.astro';
 import ProyectCard from '../components/Cards/proyect_Card.astro';
+import Tech from "../components/tech.astro";
+import MaletinSVG from '../components/MaletinSVG.astro';
+import Contactme from '../components/Buttons/Contactme.astro';
+
 ---
 
 <Layout title="Profile">
 	<!-- SALUDO -->
 	<div class="w-full">
-		<div class="relative mx-[269px]">
+		<div class=`relative mx-[230px]`>
 			<div class="w-[2px] h-[105px] bg-gradient-to-b from-black_gray-200 to-gray-200 ml-[31px] mb-2 rounded-lg"></div>
 			<Saludo></Saludo>
 			<div class="w-[2px] h-[300px] bg-gradient-to-b from-black_gray-300/10 via-white/50 to-black_gray-300/10 ml-[31px] rounded-lg absolute top-[12rem]"></div>
 		</div>
 		<div class="relative mt-20">
-			<img class="w-full absolute z-[-10]" src="../../public/img/svg/Backround2.svg" alt="">
+			<img class="w-full absolute z-[-10] " src="../../public/img/svg/Backround2.svg" alt="">
 
 			<!-- ? TRAYECTORIA -->
-			<div class="flex flex-col mx-[269px] relative">
+			<div class=`flex flex-col mx-[230px] relative`>
 				<div>
 					<div class="mt-48 flex items-center gap-5 ml-2">
-						<img src="../../public/img/svg/Maletin.svg" class="w-12 z-10" alt="" srcset="">
+						<!-- <img src="../../public/img/svg/Maletin.svg" class="w-12 z-10 fill-black" alt="" srcset=""> -->
+						<MaletinSVG color='black' height='48' width='48'></MaletinSVG>
 						<h2 class="text-black font-bold text-4xl leading-none">Trayectoria</h1>
 					</div>
 					<div class="w-[2px] h-[766px] mt-2 bg-gradient-to-b from-mustard-100 via-black/40 to-mustard-100 ml-[31px] rounded-lg absolute top-[12rem]"></div>
@@ -53,7 +58,7 @@ import ProyectCard from '../components/Cards/proyect_Card.astro';
 			</div>
 
 			<!-- ? LAST PROYECTS -->
-			<div class="flex flex-col mx-[269px] mt-44 relative w-8/12">
+			<div class=`flex flex-col mx-[230px] mt-44 relative w-8/12`>
 				<div class="ml-3 mt-20 flex justify-between items-center w-11/12">
 					<div class="flex gap-5 items-center h-10">
 						<img src="../../public/img/svg/git.svg" alt="" class="w-10">
@@ -62,12 +67,82 @@ import ProyectCard from '../components/Cards/proyect_Card.astro';
 					<span class="text-2xl font-extralight h-5 italic text-lemon-200">Ver Todos</span>
 				</div>
 				<div class="w-[2px] h-14 mt-2 bg-gradient-to-b from-white/50 to-[#00000]/5 ml-[31px] rounded-lg absolute top-0"></div>
-				<!-- ? PROYECT CARDS -->
-				<ProyectCard></ProyectCard>
+				<div class="flex flex-col gap-3">
+					<!-- ? PROYECT CARDS -->
+					<ProyectCard 
+						title='SHOPECOMERCE - Ecomerce de Dropshipers'
+						body="Aplicación enfoncada al mercado Dropshiping. En esta aplicación los Dropshipers pueden ponerse en contacto con proveedores estratégicamente seleccionados para este mercado y viceversa, con un enfoque de ganar."
+						img='../../public/img/png/shopecomerce.png'
+						views={10}
+						>
+						<ul class="flex w-11/12 h-5 justify-center">
+							<Tech img='../../public/img/svg/Astro.svg'></Tech>
+							<Tech img='../../public/img/svg/Tailwind.svg'></Tech>
+							<Tech img='../../public/img/svg/Typescript.svg'></Tech>
+							<Tech img='../../public/img/svg/Mongodb.svg'></Tech>
+						</ul>
+					</ProyectCard>
+					<ProyectCard 
+						title='SHOPECOMERCE - Ecomerce de Dropshipers'
+						body="Aplicación enfoncada al mercado Dropshiping. En esta aplicación los Dropshipers pueden ponerse en contacto con proveedores estratégicamente seleccionados para este mercado y viceversa, con un enfoque de ganar."
+						img='../../public/img/png/Spotify.png'
+						views={10}
+						>
+						<ul class="flex w-11/12 h-5 justify-center">
+							<Tech img='../../public/img/svg/Astro.svg'></Tech>
+							<Tech img='../../public/img/svg/Tailwind.svg'></Tech>
+							<Tech img='../../public/img/svg/Typescript.svg'></Tech>
+							<Tech img='../../public/img/svg/Mongodb.svg'></Tech>
+						</ul>
+					</ProyectCard>
+					<ProyectCard 
+						title='SHOPECOMERCE - Ecomerce de Dropshipers'
+						body="Aplicación enfoncada al mercado Dropshiping. En esta aplicación los Dropshipers pueden ponerse en contacto con proveedores estratégicamente seleccionados para este mercado y viceversa, con un enfoque de ganar."
+						img='../../public/img/png/rick_and_morty.png'
+						views={10}
+						>
+						<ul class="flex w-11/12 h-5 justify-center">
+							<Tech img='../../public/img/svg/Astro.svg'></Tech>
+							<Tech img='../../public/img/svg/Tailwind.svg'></Tech>
+							<Tech img='../../public/img/svg/Typescript.svg'></Tech>
+							<Tech img='../../public/img/svg/Mongodb.svg'></Tech>
+						</ul>
+					</ProyectCard>
+				</div>
+				
 			</div>
 
 		</div>
+		<div class="w-full px-[230px] flex flex-col gap-5 mt-12">
+			<div class="flex gap-3 items-center">
+				<MaletinSVG color="#FFAC00" height='48' width='48'></MaletinSVG>
+				<h3 class="text-4xl font-bold">About me</h3>
+			</div>
+			<div class="ml-10 w-full flex items-center justify-center gap-16">
+				<div class="flex flex-col gap-5 text-gray-100 w-2/3">
+					<p>¡Hola! Me llamo Juan David y hace dos años comencé mi camino en el Desarrollo de Software. Este viaje empezó con el deseo de experimentar cosas nuevas y rápidamente me enamoré de la programación.</p>
+					<p>Hoy en día, programar es una de las actividades que más disfruto, tanto trabajo como pasatiempo. Tengo experiencia en proyectos tanto en el servidor como en el cliente, lo que me ha dado una perspectiva integral en el desarrollo.</p>
+					<p>Mi objetivo es unirme a un equipo talentoso y apasionado para trabajar en proyectos desafiantes e innovadores.¿Tienes algún proyecto interesante? ¡Escríbeme!</p>
+				</div>
+				<div class="w-64">
+					<img src="../../public/img/png/foto_profile.png" alt="">
+				</div>
+			</div>
+		</div>
 
+		<div class="w-full flex flex-col text-lemon-200 justify-center items-center mt-24">
+			<p class="text-2xl font-Gruppo">
+				El Mejor momento para iniciar un <span class="text-mustard-100 font-Grandstander">Proyecto</span> fué hace 20 años
+			</p>
+			<h2 class="text-5xl font-bold font-Hachi">El segundo mejor, ¡Es ahora!</h2>
+			<div class="flex justify-between gap-10 items-center mt-8">
+				<div class="w-64 h-[1px] rounded bg-mustard-100"></div>
+				<button class=`bg-mustard-200 rounded-full w-80 h-12 box-content hover:scale-105 duration-300 ease-in-out items-center`>
+					<span class="text-black_gray-100 font-normal text-2xl">CONTÁCTAME</span>
+				</button>
+				<div class="w-64 h-[1px] rounded bg-mustard-100"></div>
+			</div>
+		</div>
 		
 	</div>
 </Layout>

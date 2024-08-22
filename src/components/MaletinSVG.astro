@@ -1,0 +1,19 @@
+---
+interface Props {
+  color: string
+  width: string
+  height: string
+}
+
+const {color, height, width} = Astro.props;
+
+---
+<div class="z-10">
+  <svg width={width} height={height} viewBox="0 0 61 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M7.625 23.3751C7.625 22.0269 8.16056 20.7339 9.11387 19.7806C10.0672 18.8273 11.3601 18.2917 12.7083 18.2917H48.2917C49.6399 18.2917 50.9328 18.8273 51.8861 19.7806C52.8394 20.7339 53.375 22.0269 53.375 23.3751V46.2501C53.375 47.5983 52.8394 48.8912 51.8861 49.8445C50.9328 50.7978 49.6399 51.3334 48.2917 51.3334H12.7083C11.3601 51.3334 10.0672 50.7978 9.11387 49.8445C8.16056 48.8912 7.625 47.5983 7.625 46.2501V23.3751Z" stroke={color} stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M20.3334 18.2917V13.2083C20.3334 11.8601 20.8689 10.5672 21.8222 9.61387C22.7756 8.66056 24.0685 8.125 25.4167 8.125H35.5834C36.9316 8.125 38.2245 8.66056 39.1778 9.61387C40.1311 10.5672 40.6667 11.8601 40.6667 13.2083V18.2917" stroke={color} stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M30.5 31V31.0254" stroke={color} stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M7.625 33.5417C14.7203 37.1171 22.5548 38.9795 30.5 38.9795C38.4452 38.9795 46.2797 37.1171 53.375 33.5417" stroke={color} stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</div>
+  

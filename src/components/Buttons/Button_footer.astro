@@ -1,0 +1,15 @@
+---
+
+interface Props {
+  text: string
+  link: string
+}
+
+const {text, link} = Astro.props;
+---
+
+<button class="underline-offset-4 font-bold hover:scale-105 duration-150 ease-linear transition-all">
+  <a href={link} target="_blank">
+    <u>{text}</u>
+  </a>
+</button>

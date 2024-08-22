@@ -1,5 +1,6 @@
 ---
 import HeaderMenu from '../components/Header_menu.astro';
+import ButtonFooter from '../components/Buttons/Button_footer.astro';
 
 interface Props {
 	title: string;
@@ -8,6 +9,7 @@ interface Props {
 const { title } = Astro.props;
 
 const header_Strings = ["HOME", "TRAYECTORY", "BLOG", "PROYECTS", "CONTACT"];
+const linkedin = "https://www.linkedin.com/in/juan-avila-442974276/";
 
 ---
 
@@ -21,7 +23,7 @@ const header_Strings = ["HOME", "TRAYECTORY", "BLOG", "PROYECTS", "CONTACT"];
 		<meta name="generator" content={Astro.generator} />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Hachi+Maru+Pop&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&family=Gruppo&family=Hachi+Maru+Pop&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 		<title>{title}</title>
 	</head>
 	<body class="bg-black_gray-100 text-lemon-200 font-inter w-full">
@@ -37,5 +39,35 @@ const header_Strings = ["HOME", "TRAYECTORY", "BLOG", "PROYECTS", "CONTACT"];
 		<main>
 			<slot></slot>
 		</main>
+		<footer class="mt-16 relative w-full">
+			<img src="../../public/img/svg/footer_background.svg" class="w-full absolute -z-10" alt="">
+			<div class="flex items-center justify-center text-black gap-24 h-36">
+				<ButtonFooter text='Certificados' link={linkedin}></ButtonFooter>
+				<div class="font-light">© 2024 CODE-G-ROOT. Casi todos los derechos reservados</div>
+				<ButtonFooter text='Hoja de vida' link={linkedin}></ButtonFooter>
+			</div>
+		</footer>
 	</body>
 </html>
+
+<!-- <style>
+	.clip-footer {
+		width: 100%;
+		background-color: #FFAC00; /* Color de fondo que toma la forma del SVG */
+		clip-path: url(../../public/img/svg/footer_background.svg);
+	}
+
+	@media (max-width: 768px) {
+		.clip-footer {
+			clip-path: url(../../public/img/svg/footer_background.svg);
+		}
+	}
+</style>
+
+<svg width="0" height="0">
+	<defs>
+		<clipPath id="footer-clip" clipPathUnits="objectBoundingBox">
+			<path d="M0 0.148C0 0.148 0.026 0.224 0.043 0.222C0.068 0.218 0.081 0.073 0.106 0.027C0.159 -0.019 0.189 0.012 0.244 0.015C0.345 0.02 0.4 -0.022 0.5 0.005C0.569 0.018 0.607 0.151 0.676 0.151C0.733 0.151 0.765 0.057 0.822 0.079C0.872 0.097 0.895 0.225 0.946 0.193C0.97 0.177 1 0.148 1 0.148V1H0V0.148Z" />
+		</clipPath>
+	</defs>
+</svg> -->

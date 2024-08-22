@@ -45,6 +45,7 @@ export default {
       Hachi: ["Hachi Maru Pop"],
       Gruppo: ["Gruppo"],
       inter: ["Inter"],
+      Grandstander: ["Grandstander"]
     },
     
   },
